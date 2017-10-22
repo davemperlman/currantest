@@ -1,0 +1,234 @@
+body {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #87C970; }
+
+#login {
+  width: 450px;
+  height: 250px;
+  margin: auto;
+  display: block;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 1px 1px 6px #000;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0; }
+  #login fieldset {
+    border: none;
+    margin-top: 2rem; }
+  #login label {
+    margin: .5rem auto;
+    display: block;
+    text-align: center;
+    font-variant: small-caps; }
+  #login input {
+    display: block;
+    margin: 0 auto;
+    height: 2rem;
+    width: 300px;
+    border: none;
+    background-color: #ddd !important; }
+  #login button {
+    height: 2rem;
+    border-radius: 5px;
+    border: none;
+    background-color: #36c636;
+    width: 180px;
+    margin: auto;
+    display: block; }
+
+.modal {
+  width: 100%;
+  height: 100%;
+  background-color: #99c;
+  display: block;
+  position: absolute;
+  top: 0; }
+
+.close {
+  position: absolute;
+  top: .5;
+  right: .5rem; }
+
+.images_preview {
+  width: 100%;
+  height: 100%;
+  overflow: scroll; }
+  .images_preview img {
+    display: inline-block;
+    width: 50%; }
+
+#adminNav {
+  display: block;
+  margin: 2rem auto;
+  max-width: 760px; }
+  #adminNav li {
+    color: #444;
+    font-weight: bold;
+    font-size: .9rem;
+    display: inline-block;
+    width: 18%;
+    height: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    border: 1px transparent solid;
+    border-radius: .6rem;
+    box-sizing: border-box; }
+    #adminNav li:nth-child(1) {
+      background-color: #FFCC09; }
+    #adminNav li:nth-child(2) {
+      background-color: #FAE287; }
+    #adminNav li:nth-child(3) {
+      background-color: #FFA82B; }
+    #adminNav li:nth-child(4) {
+      background-color: #6AEAFF; }
+    #adminNav li:nth-child(5) {
+      background-color: #44CCBA; }
+
+.active {
+  position: relative;
+  filter: brightness(0.8); }
+  .active::after {
+    content: '';
+    display: block;
+    width: 80%;
+    left: 10%;
+    height: 4%;
+    bottom: -.5rem;
+    position: absolute;
+    background-color: inherit; }
+
+#action {
+  width: 80%;
+  margin: 1rem auto;
+  height: auto; }
+
+#calendar {
+  position: absolute;
+  bottom: .25rem;
+  left: .25rem;
+  box-shadow: 1px 1px 6px #000;
+  background-color: #fff; }
+
+.banner {
+  background-color: #555;
+  height: 100px;
+  width: 100%; }
+  .banner h1 {
+    display: inline-block;
+    height: 100%;
+    line-height: 100px;
+    margin: 0 1rem; }
+
+.activeDay {
+  color: #fff !important;
+  background-color: #000 !important; }
+
+#jobs {
+  height: 601px;
+  padding: 0 .25rem;
+  border-radius: 5px;
+  position: absolute;
+  right: .25rem;
+  bottom: .25rem;
+  width: 400px;
+  background-color: #fff;
+  box-shadow: 1px 1px 6px #000;
+  overflow: scroll; }
+  #jobs::before {
+    content: 'Jobs';
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    margin-top: .5rem; }
+
+.dayJob {
+  width: 100%;
+  height: 3rem;
+  margin-bottom: .25rem; }
+  .dayJob td {
+    width: 33.3%;
+    text-align: center; }
+    .dayJob td .jobComplete {
+      height: 100%;
+      width: 100%;
+      background-color: #449966;
+      border: none;
+      float: right; }
+
+.jobWrap {
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden; }
+  .jobWrap .job {
+    background-color: #937;
+    width: 100%;
+    margin: .5rem auto;
+    position: relative; }
+    .jobWrap .job::after {
+      content: '+';
+      position: absolute;
+      right: .5rem;
+      top: .25rem; }
+    .jobWrap .job td {
+      width: 20%; }
+      .jobWrap .job td:nth-child(4), .jobWrap .job td:nth-child(5) {
+        width: 10%; }
+  .jobWrap .orders {
+    max-height: 0;
+    overflow: hidden;
+    transition: all .1s;
+    background-color: #fff; }
+    .jobWrap .orders ul {
+      display: block; }
+    .jobWrap .orders li {
+      display: inline-block; }
+  .jobWrap .open {
+    max-height: 1000px; }
+  .jobWrap .jobOrders {
+    margin-right: 10%;
+    float: right; }
+
+#jobForm label, #workOrderForm label {
+  display: block;
+  margin: .5rem auto;
+  width: 60%; }
+#jobForm input, #jobForm select, #workOrderForm input, #workOrderForm select {
+  border-bottom: .1rem solid #000;
+  float: right; }
+#jobForm textarea, #workOrderForm textarea {
+  border: 1px solid #000;
+  float: right;
+  resize: none;
+  margin-bottom: 1rem; }
+#jobForm button, #workOrderForm button {
+  color: #444;
+  background-color: #4b5;
+  font-weight: bold;
+  font-size: 1rem;
+  display: block;
+  margin: 1rem auto;
+  width: 30%;
+  height: 3rem;
+  line-height: 2rem;
+  clear: both;
+  text-align: center;
+  border: 1px transparent solid;
+  border-radius: .6rem;
+  box-sizing: border-box; }
+
+.details {
+  position: relative;
+  background-color: #fff;
+  display: none; }
+  .details ul {
+    display: block; }
+  .details li {
+    list-style: none; }
+    .details li p {
+      margin-left: 1rem; }
+
+/*# sourceMappingURL=main.css.map */

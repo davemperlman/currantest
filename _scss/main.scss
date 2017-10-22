@@ -1,0 +1,289 @@
+// Global -- Typography, Color Maps, Margins, etc --
+
+$colors: (
+	background: #87C970,
+	white: #fff,
+	gray: #ddd,
+	submit: #36c636
+	);
+
+body {
+	width: 100%;
+	margin: 0 auto;
+	background-color: map-get($colors, background);
+}
+#login {
+	fieldset {
+		border: none;
+		margin-top: 2rem;
+	}
+	width: 450px;
+	height: 250px;
+	margin: auto;
+	display: block;
+	position: absolute;
+	background-color: map-get($colors, white);
+	box-shadow: 1px 1px 6px #000;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	label {
+		margin: .5rem auto;
+		display: block;
+		text-align: center;
+		font-variant: small-caps;
+	}
+	input {
+		display: block;
+		margin: 0 auto;
+		height: 2rem;
+		width: 300px;
+		border: none;
+		background-color: map-get($colors, gray) !important;
+	}
+	button {
+		height: 2rem;
+		border-radius: 5px;
+		border: none;
+		background-color: map-get($colors, submit);
+		width: 180px;
+		margin: auto;
+		display: block;
+	}
+}
+
+// Modal
+.modal {
+	width: 100%;
+	height: 100%;
+	background-color: #99c;
+	display: block;
+	position: absolute;
+	top: 0;
+}
+.close {
+	position: absolute;
+	top: .5;
+	right: .5rem;
+}
+.images_preview {
+	width: 100%;
+	height: 100%;
+	overflow: scroll;
+	img {
+		display: inline-block;
+		width: 50%;
+	}
+}
+
+// Admin
+ #adminNav {
+ 	display: block;
+ 	margin: 2rem auto;
+ 	max-width: 760px;
+	li {
+		color: #444;
+		font-weight: bold;
+		font-size: .9rem;
+		display: inline-block;
+		width: 18%;
+		height: 3rem;
+		line-height: 3rem;
+		text-align: center;
+		border: 1px transparent solid;
+		border-radius: .6rem;
+		box-sizing: border-box;
+		&:nth-child(1) {
+			background-color: #FFCC09;
+		}
+		&:nth-child(2) {
+			background-color: #FAE287;
+		}
+		&:nth-child(3) {
+			background-color: #FFA82B;
+		}
+		&:nth-child(4) {
+			background-color: #6AEAFF;
+		}
+		&:nth-child(5) {
+			background-color: #44CCBA;
+		}
+	}
+}
+.active {
+	position: relative;
+	filter: brightness(.8);
+	&::after {
+		content: '';
+		display: block;
+		width: 80%;
+		left: 10%;
+		height: 4%;
+		bottom: -.5rem;
+		position: absolute;
+		background-color: inherit;
+	}
+}
+#action {
+	width: 80%;
+	margin: 1rem auto;
+	height: auto;
+}
+
+#calendar {
+	position: absolute;
+	bottom: .25rem;
+	left: .25rem;
+	box-shadow: 1px 1px 6px #000;
+	background-color: map-get($colors, white);
+}
+.banner {
+	background-color: #555;
+	height: 100px;
+	width: 100%;
+	
+	h1 {
+		display: inline-block;
+		height: 100%;
+		line-height: 100px;
+		margin: 0 1rem;
+	}
+}
+
+.activeDay {
+	color: #fff !important;
+	background-color: #000 !important;
+}
+#jobs {
+	height: 601px;
+	padding: 0 .25rem;
+	border-radius: 5px;
+	position: absolute;
+	right: .25rem;
+	bottom: .25rem;
+	width: 400px;
+	background-color: map-get($colors, white);
+	box-shadow: 1px 1px 6px #000;
+	overflow: scroll;
+	&::before {
+		content: 'Jobs';
+		font-size: 1.5rem;
+		font-weight: bold;
+		text-align: center;
+		display: block;
+		margin-top: .5rem;
+	}
+}
+#date {
+	
+}
+
+.dayJob {
+	width: 100%;
+	height: 3rem;
+	margin-bottom: .25rem;
+	td {
+		width: 33.3%;
+		text-align: center;
+		.jobComplete {
+			height: 100%;
+			width: 100%;
+			background-color: #449966;
+			border: none;
+			float: right;
+		}
+	}
+}
+
+.jobWrap {
+	width: 80%;
+	margin: 0 auto;
+	overflow: hidden;
+	.job {
+		background-color: #937;
+		width: 100%;
+		margin: .5rem auto;
+		position: relative;
+		&::after {
+			content: '+';
+			position: absolute;
+			//display: block;
+			right: .5rem;
+			top: .25rem;
+		}
+		td {
+			width: 20%;
+			&:nth-child(4), &:nth-child(5) {
+				width: 10%;
+			}
+		}
+	}
+	.orders {
+		max-height: 0;
+		overflow: hidden;
+		transition: all .1s;
+		background-color: #fff;
+		ul {
+			display: block;
+		}
+		li {
+			display: inline-block;
+			}
+	}
+	.open {
+		max-height: 1000px;
+	}
+	.jobOrders {
+		margin-right: 10%;
+		float: right;
+	}
+}
+	// Create Jobs
+	#jobForm, #workOrderForm {
+		label {
+			display: block;
+			margin: .5rem auto;
+			width: 60%;
+		}
+		input, select {
+			border-bottom: .1rem solid #000;
+			float: right;
+		}
+		textarea {
+			border: 1px solid #000;
+			float: right;
+			resize: none;
+			margin-bottom: 1rem;
+		}
+		button {
+			color: #444;
+			background-color: #4b5;
+			font-weight: bold;
+			font-size: 1rem;
+			display: block;
+			margin: 1rem auto;
+			width: 30%;
+			height: 3rem;
+			line-height: 2rem;
+			clear: both;
+			text-align: center;
+			border: 1px transparent solid;
+			border-radius: .6rem;
+			box-sizing: border-box;
+		}
+	}
+	.details {
+		position: relative;
+		background-color: #fff;
+		display: none;
+		ul {
+			display: block;
+		}
+		li {
+			list-style: none;
+			p {
+				margin-left: 1rem;
+			}
+		}
+	}
