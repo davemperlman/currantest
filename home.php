@@ -24,6 +24,9 @@
 	 <section id="jobs">
 	
 	</section>
+	<div class="completeOrder">
+	
+	</div>
 	 <script src="_js/calFunction.js"></script>
 	 <script>
 	 	var today = $('#date').text().trim();
@@ -32,5 +35,9 @@
 	 	var day = $(both);
 
 	 	day.addClass('activeDay');
+
+	 	 $('.thumbnail').on('click', function(){
+                console.log('clicked');
+            });
 	 </script>
 <?php require_once 'utilities/footer.php'; ?>

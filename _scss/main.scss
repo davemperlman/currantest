@@ -4,13 +4,15 @@ $colors: (
 	background: #87C970,
 	white: #fff,
 	gray: #ddd,
-	submit: #36c636
+	submit: #36c636,
+	upload: #c636c6
 	);
 
 body {
 	width: 100%;
 	margin: 0 auto;
 	background-color: map-get($colors, background);
+	overflow: hidden;
 }
 #login {
 	fieldset {
@@ -64,12 +66,23 @@ body {
 }
 .close {
 	position: absolute;
-	top: .5;
-	right: .5rem;
+	top: 0rem;
+	right: 0rem;
+	text-decoration: none;
+	border: .01rem inset #333;
+	height: 2.5rem;
+	width: 7rem;
+	text-align: center;
+	line-height: 2.5rem;
+	&::after {
+		content: '\276F';
+		font-size: 2rem;
+		position: absolute;
+	}
 }
 .images_preview {
 	width: 100%;
-	height: 100%;
+	max-height: 200px;
 	overflow: scroll;
 	img {
 		display: inline-block;
@@ -149,6 +162,10 @@ body {
 		line-height: 100px;
 		margin: 0 1rem;
 	}
+	ul {
+		float: right;
+		margin-right: .5rem;
+	}
 }
 
 .activeDay {
@@ -176,7 +193,7 @@ body {
 	}
 }
 #date {
-	
+	display: none;
 }
 
 .dayJob {
@@ -285,5 +302,72 @@ body {
 			p {
 				margin-left: 1rem;
 			}
+		}
+		button {
+		height: 2rem;
+		border-radius: 5px;
+		border: none;
+		background-color: map-get($colors, submit);
+		width: 180px;
+		margin: auto;
+		display: block;
+	}
+	}
+
+	.completeOrder {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0,0,0,.5);
+		margin-left: 100vw;
+		transition: all .5s;
+		&.inView {
+			margin-left: 0;
+		}
+		form {
+			position: relative;
+			width: 70%;
+			margin: 0 auto;
+			display: block;
+			background-color: map-get($colors, white);
+			padding: .5rem;
+			input, textarea {
+				display: block;
+				width: 100%;
+				margin: .5rem auto;
+				background-color: map-get($colors, gray);
+				border: none;
+				//border-radius: 5px;
+				padding: .5rem;
+				resize: none;
+			}
+			label {
+				display: block;
+				text-align: center;
+			}
+			input[type=file] {
+				display: none;
+			}
+			fieldset {
+				border: none;
+				width: 80%;
+				display: block;
+				margin: .5rem auto;
+			}
+		}
+	}
+
+	#imgUploadLabel {
+		background-color: map-get($colors, upload);
+		height: 2rem;
+		line-height: 2rem;
+		width: 12rem;
+		text-align: center;
+		margin: 1rem auto;
+		display: block;
+		border-radius: 5px;
+		&::after {
+			content: '\0021EA';
+
 		}
 	}
